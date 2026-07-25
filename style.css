@@ -2013,3 +2013,8 @@ footer {
     }
 
 }
+html, body {
+
+    overflow-x: hidden;
+
+}
