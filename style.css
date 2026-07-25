@@ -51,6 +51,7 @@ body {
     position: absolute;
     z-index: -1;
     opacity: .75;
+    overflow: hidden;
 }
 
 
