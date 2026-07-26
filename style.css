@@ -50,7 +50,7 @@ body {
 .shape {
     position: absolute;
     z-index: 0;
-    opacity: .35;
+    opacity: .30;
     overflow: hidden;
 }
 
