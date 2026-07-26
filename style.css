@@ -2,7 +2,7 @@
    KIDS WORSHIP LAUNCH
    Main Stylesheet
    Founded by Gage Petrick
-================================ */ 
+================================ */
 
 
 /* ---------- RESET ---------- */
@@ -50,7 +50,7 @@ body {
 .shape {
     position: absolute;
     z-index: 0;
-    opacity: .30;
+    opacity: .50;
     overflow: hidden;
 }
 
@@ -138,7 +138,7 @@ body {
         0% 100%
     );
 
-    top:320px;
+    top:120px;
 
     left:48%;
 
@@ -299,6 +299,16 @@ header {
     max-width: 650px;
     
     z-index: 2;
+
+    color: #000;
+}
+.hero-text p{
+
+    max-width: 650px;
+    
+    z-index: 2;
+
+    color: #000;
 }
 .hero-image {
 
