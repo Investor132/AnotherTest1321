@@ -286,6 +286,10 @@ header {
 
     gap: 60px;
 
+    position: relative;
+    
+    overflow: hidden;
+
 }
 
 
