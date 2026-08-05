@@ -1,2139 +1,843 @@
-/* ==============================
-   KIDS WORSHIP LAUNCH
-   Main Stylesheet
-   Founded by Gage Petrick
-================================ */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Kids Worship Launch | Gage Petrick</title>
 
-/* ---------- RESET ---------- */
+    <meta name="description" content="Kids Worship Launch helps churches build lasting, volunteer-led children's worship ministries. Founded by Gage Petrick.">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
 
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-    font-family: "Arial", sans-serif;
-    color: #1f2937;
-    background: #ffffff;
-    overflow-x: hidden;
-}
-
-
-/* ---------- COLORS ---------- */
-
-:root {
-
-    --blue: #2563eb;
-    --purple: #7c3aed;
-    --orange: #f97316;
-    --green: #10b981;
-    --yellow: #fbbf24;
-
-    --dark: #111827;
-    --light: #f8fafc;
-
-}
-
-
-
-/* ---------- GEOMETRIC BACKGROUND SHAPES ---------- */
-
-
-.shape {
-    position: absolute;
-    z-index: 0;
-    opacity: .50;
-    overflow: hidden;
-}
-
-
-.shape-one {
-
-    width: 500px;
-    height: 500px;
-
-    background: linear-gradient(
-        135deg,
-        var(--blue),
-        var(--purple)
-    );
-
-    border-radius: 40% 60% 60% 40%;
-
-    top: -180px;
-    right: -320px;
-
-    animation: floatOne 10s infinite ease-in-out;
-
-}
-
-
-
-.shape-two {
-
-    width: 250px;
-    height: 250px;
-
-    background: linear-gradient(
-        135deg,
-        var(--orange),
-        var(--yellow)
-    );
-
-    transform: rotate(45deg);
-
-    bottom: 100px;
-    left: -100px;
-
-    animation: floatTwo 12s infinite ease-in-out;
-
-}
-
-
-
-.shape-three {
-
-    width: 180px;
-    height: 180px;
-
-    background: var(--green);
-
-    clip-path: polygon(
-        50% 0,
-        100% 100%,
-        0 100%
-    );
-
-    top: 450px;
-    right: 15%;
-
-    animation: floatThree 8s infinite ease-in-out;
-
-}
-.shape-four {
-
-    animation: floatFour 20s infinite ease-in-out ;
+    <!-- Decorative geometric shapes -->
     
-    width:220px;
 
-    height:220px;
 
-    background:linear-gradient(
-        135deg,
-        #10b981,
-        #34d399
-    );
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
 
-    clip-path:polygon(
-        50% 0%,
-        100% 100%,
-        0% 100%
-    );
+            <div class="logo">
+                Kids Worship Launch
+                <span>by Gage Petrick</span>
+            </div>
 
-    top:120px;
+            <ul class="nav-links">
+                <li><a href="#process">Process</a></li>
+                <li><a href="#stories">Church Stories</a></li>
+                <li><a href="#testimonial">Pastor Testimonial</a></li>
+                <li><a href="#about">About Gage</a></li>
+                <li><a href="#contact" class="nav-button">Contact</a></li>
+            </ul>
 
-    left:42%;
+        </nav>
+    </header>
 
-    transform:rotate(25deg);
 
-}
 
-
-
-@keyframes floatOne {
-
-    50% {
-        transform: translateY(30px) rotate(10deg);
-    }
-
-}
-
-
-@keyframes floatTwo {
-
-    50% {
-        transform: translateY(-25px) rotate(60deg);
-    }
-
-}
-
-
-@keyframes floatThree {
-
-    50% {
-        transform: translateY(25px);
-    }
-
-}
-@keyframes floatFour {
-
-    25% {
-        transform: translateY(-25px) rotate(60deg);
-    }
-
-}
-
-
-
-/* ---------- NAVIGATION ---------- */
-
-
-header {
-
-    width: 100%;
-    padding: 30px 8%;
-
-}
-
-
-
-.navbar {
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-
-
-.logo {
-
-    font-size: 1.5rem;
-    font-weight: 800;
-
-    color: var(--dark);
-
-}
-
-
-.logo span {
-
-    display: block;
-
-    font-size: .85rem;
-
-    color: var(--blue);
-
-    font-weight: 600;
-
-}
-
-
-
-.nav-links {
-
-    display: flex;
-
-    list-style: none;
-
-    gap: 30px;
-
-    align-items: center;
-
-}
-
-
-
-.nav-links a {
-
-    text-decoration: none;
-
-    color: var(--dark);
-
-    font-weight: 600;
-
-}
-
-
-
-.nav-button {
-
-    background: var(--blue);
-
-    color: white !important;
-
-    padding: 12px 25px;
-
-    border-radius: 50px;
-
-}
-
-
-
-/* ---------- HERO ---------- */
-
-
-.hero {
-
-    min-height: 85vh;
-
-    padding: 60px 8%;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 60px;
-
-    position: relative;
-
-    overflow: hidden;
-
-}
-
-
-
-.hero-text {
-
-    max-width: 650px;
+    <!-- Hero Section -->
+    <section class="hero">
+                
+        <div class="hero-text">
+        
+        <div class="shape shape-one"></div>
     
-    z-index: 2;
-
-    color: #000;
-}
-.hero-text p{
-
-    max-width: 650px;
+        <div class="shape shape-two"></div>
     
-    z-index: 2;
+        <div class="shape shape-four"></div>
+            <p class="eyebrow">
+                Kids Worship Launch
+            </p>
 
-    color: #000;
-}
-.hero-image {
+            <h1>
+                Building Kids' Worship Ministries That Last
+            </h1>
 
-    position: relative;
+            <p class="hero-description">
+                Helping churches launch and maintain a volunteer-led worship team through training, leadership development, and sustainability that is personalized to each kids environment.
+            </p>
 
-    display: flex;
 
-    justify-content: center;
+            <div class="hero-buttons">
 
-    align-items: center;
+                <a href="#process" class="secondary-button">
+                    View The Process
+                </a>
 
-    z-index: 2;
-}
-.hero-image img {
+                <a href="#about" class="primary-button">
+                    Learn About Gage
+                </a>
 
-    width: 420px;
+            </div>
 
-    max-width: 86%;
+        </div>
 
-    border-radius: 30px;
 
-    object-fit: cover;
 
-    box-shadow:
-        0 30px 70px rgba(0,0,0,.18);
+        <div class="hero-image">
 
-    position: relative;
+            <!-- Replace this image later with your photo -->
+            <div class="photo-placeholder">
+                <!--<img src="Kids-Worship-Launch/images/Gage.jpg" alt="Gage Petrick">-->
+                <img src="Gage.jpg" alt="Gage Petrick">
+            </div>
 
-    z-index: 2;
+        </div>
 
-    transition: .4s;
 
-}
+    </section>
 
+<section id="process" section class="process-section">
 
+    <div class="section-title">
 
+        <p class="eyebrow">
+            The Process
+        </p>
 
-.eyebrow {
+        <h2>
+            Launching a Volunteer-Driven Team 
+        </h2>
 
-    color: var(--orange);
+        <p>
+            Every church is different, so no process ever looks quite the same.
+            Through intentionally learning the environment, seeking leaders, and training them to make the maximum impact,
+            my goal is to launch a team and leave the door open for continual growth after I am gone. 
+        </p>
 
-    font-weight: 800;
+    </div>
 
-    letter-spacing: 2px;
+    <div class="process-flow">
 
-    text-transform: uppercase;
+        <div class="process-step">
 
-    margin-bottom: 20px;
+            <div class="step-icon">🧠</div>
 
-}
+            <h3>Learn Your Ministry</h3>
 
+            <p>
+                Because each church has a unique vision, flow, volunteer force, and environment 
+                for worship observation and discussion are essential in order to develop 
+                a plan that fits YOUR church.
+            </p>
 
+        </div>
 
-h1 {
+        <div class="process-arrow">➜</div>
 
-    font-size: clamp(3rem, 6vw, 5rem);
+        <div class="process-step">
 
-    line-height: 1.05;
+            <div class="step-icon">🎵</div>
 
-    color: var(--dark);
+            <h3>Lead & Recruit</h3>
 
-    margin-bottom: 25px;
+            <p>
+                On Sunday mornings I will lead the kids in worship and inform
+                volunteers on how they can become a part of the journey and
+                join the worship team. 
+        </div>
 
-}
+        <div class="process-arrow">➜</div>
 
+        <div class="process-step">
 
+            <div class="step-icon">🤝</div>
 
-.hero-description {
+            <h3>Equip Leaders</h3>
 
-    font-size: 1.2rem;
+            <p>
+                Through teaching dances, microphone skills, team coordination, and 
+                confident leadership, I will equip the volunteers to lead kids in
+                worshiping the Lord.
+            </p>
 
-    line-height: 1.7;
+        </div>
 
-    color: #4b5563;
+        <div class="process-arrow">➜</div>
 
-    margin-bottom: 35px;
+        <div class="process-step">
 
-}
+            <div class="step-icon">🌱</div>
 
+            <h3>Support the Future</h3>
 
+            <p>
+                After launch, I continue checking in, offering feedback,
+                answering questions, and sometimes providing optional follow-up visits
+                so your ministry can continue to grow.
+            </p>
 
-/* ---------- BUTTONS ---------- */
+        </div>
 
+    </div>
 
-.hero-buttons {
+</section>
 
-    display: flex;
 
-    gap: 20px;
+    <!-- Beginning of future sections -->
 
-    flex-wrap: wrap;
+    <!-- =========================
+     CHURCH STORIES SECTION
+========================= -->
 
-}
+<section id="stories" class="stories-section">
 
+    <div class="section-title">
 
-.primary-button,
-.secondary-button {
+        <p class="eyebrow">
+            Real Churches. Real Impact.
+        </p>
 
-    text-decoration: none;
+        <h2>
+            Church Stories
+        </h2>
 
-    padding: 16px 30px;
+    </div>
 
-    border-radius: 50px;
 
-    font-weight: 700;
 
-    transition: .3s;
+    <div class="story-container">
 
-}
 
+        <!-- Relevant Community Church -->
 
+        <article class="story-card blue-card">
 
-.primary-button {
+            <div class="story-image">
+                <div class="image-bg blue"></div>
+                <img src="RelevantWorship.jpg" alt="Relevant Worship Photo">
+            </div>
 
-    background: var(--blue);
+            <div class="story-content">
 
-    color: white;
+                <p class="story-label">
+                    Leadership Foundation
+                </p>
 
-}
 
+                <h3>
+                    Relevant Kids Worship
+                </h3>
 
 
-.secondary-button {
+                <p class="story-location">
+                    Relevant Community Church • Elkhorn, Nebraska
+                </p>
 
-    border: 2px solid var(--blue);
 
-    color: var(--blue);
+                <p style="text-indent: 30px;">
+                    At Relevant Community Church I spent two years 
+                    collaborating with Olivia Goodman, one other highschool
+                    co-leader, to run and expand the thriving kids worship team.
+                    Through my time at Relevant I truly learned
+                    what a successful group looks like and I developed the skills
+                    that it takes to lead a efficient team of volunteers. 
+                </p>
 
-}
+                <p style="text-indent: 30px;">
+                    Each Sunday morning I would help to lead worship on stage 
+                    and throughout the week I would spend my time 
+                    coordinating volunteers, training new members, and choreographing new dances.
+                    
+                </p>
 
 
+                <p style="text-indent: 30px;">
+                    My time at Relevant allowed me to gain experience 
+                    in running and improving a highly-functioning
+                    team and helped me develop the foundation 
+                    in leadership needed to help other 
+                    churches build their own teams.
+                </p>
 
-.primary-button:hover,
-.secondary-button:hover {
 
-    transform: translateY(-5px);
+                <div class="impact-grid">
 
-}
+                    <div>
+                        <strong>2</strong>
+                        <span>Years Leading</span>
+                    </div>
 
 
+                    <div>
+                        <strong>11</strong>
+                        <span>Songs Choreographed</span>
+                    </div>
 
-/* ---------- PHOTO ---------- */
 
+                    <div>
+                        <strong>17</strong>
+                        <span>Volunteers Coordinated</span>
+                    </div>
 
-.hero-image {
+                </div>
 
-    display: flex;
 
-    justify-content: center;
+                <a 
+                href="https://www.youtube.com/@RelevantKidsWorship"
+                target="_blank"
+                class="story-button">
 
-}
+                    Watch Relevant Kids Worship →
 
+                </a>
 
 
-.photo-placeholder {
+            </div>
 
-    width: 350px;
 
-    height: 450px;
+        </article>
 
-    background:
 
-    linear-gradient(
-        135deg,
-        var(--purple),
-        var(--blue)
-    );
 
-    border-radius: 40px;
 
-    display: flex;
+        <!-- Christ Community Church -->
 
-    align-items: center;
 
-    justify-content: center;
+        <article class="story-card orange-card featured-story">
+            
+            <div class="story-image">
+                <div class="image-bg orange"></div>
+                <img src="ChristCommunityWorship.jpg" alt="Christ Community Worship Photo">
+            </div>
 
-    color: white;
+            <div class="story-content">
+                
 
-    font-size: 2rem;
+                <p class="story-label">
+                    Four Week Launch
+                </p>
 
-    font-weight: 800;
 
-    box-shadow: 0 25px 60px rgba(0,0,0,.15);
+                <h3>
+                    Christ Community Church Kids Worship
+                </h3>
 
-}
 
+                <p class="story-location">
+                    Christ Community Church • Omaha, Nebraska
+                </p>
 
 
-/* ---------- SECTIONS ---------- */
+                <p style="text-indent: 30px;">
+                    After helping out at CCC's vacation bible school
+                    I saw a need for the kids ministry to develop a
+                    live kids worship team. Kids had been watching worship
+                    videos every week, and I knew that I could help to
+                    provide a more enriching environment for the kids.
+                </p>
 
 
-section {
+                <p style="text-indent: 30px;">
+                    Through reaching out to the Kids Ministry leader, 
+                    Bryant Belknap, we developed a four week plan to 
+                    develop a thriving worship team from scratch. It 
+                    involved learning the situation, leading worship, 
+                    recruiting volunteers, equipping leaders, and 
+                    supporting the future. This process was extremely 
+                    successful and is how I plan to help other churches.
+                </p>
 
-    padding: 100px 8%;
 
-    text-align: center;
+                <p style="text-indent: 30px;">
+                    I volunteered over 40 hours to be there every Sunday
+                    and come in outside of church hours in order to 
+                    film worship videos for reference over years to come
+                    and to equip the two new team leads, Anabelle Bradley and Camry Coler.
+                    I was able to create a system that is has grown 
+                    exponentially since then and is still thriving.
+                </p>
 
-}
 
 
+                <div class="impact-grid">
 
-section h2 {
 
-    font-size: 3rem;
+                    <div>
+                        <strong>4</strong>
+                        <span>Weeks Training</span>
+                    </div>
 
-    margin-bottom: 20px;
 
-    color: var(--dark);
+                    <div>
+                        <strong>20</strong>
+                        <span>Dances Filmed</span>
+                    </div>
 
-}
 
+                    <div>
+                        <strong>5</strong>
+                        <span>Current Volunteers</span>
+                    </div>
 
-section p {
 
-    font-size: 1.2rem;
+                </div>
 
-    color: #6b7280;
 
-}
 
+                <a 
+                href="https://www.youtube.com/@CCCKids-worship"
+                target="_blank"
+                class="story-button">
 
+                    Watch Christ Community Kids Worship →
 
-/* ---------- FOOTER ---------- */
+                </a>
 
 
-footer {
 
-    padding: 40px;
+            </div>
 
-    background: var(--dark);
 
-    color: white;
+        </article>
 
-    text-align: center;
 
-}
+    </div>
 
 
+</section>
 
-/* ---------- MOBILE ---------- */
+<!--
+<section class="resources-section">
 
+    <div class="section-title">
 
-@media(max-width:900px){
+        <p class="eyebrow">Resources</p>
 
+        <h2>What Your Church Receives</h2>
 
-    .nav-links {
+        <p>
+            My goal isn't just to launch your worship ministry—it's to leave
+            your church with practical tools that help your volunteers lead with
+            confidence long after my visit.
+        </p>
 
-        display:none;
+    </div>
 
-    }
+    <div class="resources-grid">
 
+        <div class="resource-card">
+            <div class="resource-icon">
+                🎥
+            </div>
+            <h3>Practice Videos</h3>
+            <p>
+                Step-by-step dance and worship practice videos that volunteers
+                can use throughout the week to learn movements and review songs
+                at their own pace.
+            </p>
+        </div>
 
+        <div class="resource-card">
+            <div class="resource-icon">
+                🎤
+            </div>
+            <h3>Lyric Video Library</h3>
+            <p>
+                A curated collection of lyric videos that can be used during
+                children's worship to help kids follow along and participate
+                more confidently.
+            </p>
+        </div>
 
-    .hero {
+        <div class="resource-card">
+            <div class="resource-icon">
+                👨‍🏫
+            </div>
+            <h3>Equipped Leaders</h3>
+            <p>
+                Leadership Skills
+            </p>
+        </div>
 
-        flex-direction: column;
+        <div class="resource-card">
+            <div class="resource-icon">
+                🛠️
+            </div>
+            <h3>Follow-Up Support</h3>
+            <p>
+                Ongoing check-ins, feedback, and encouragement after launch,
+                with optional return visits available when additional coaching
+                or support would be helpful.
+            </p>
+        </div>
 
-        text-align:center;
+    </div>
 
-    }
+</section>
+-->
+<section id="testimonial" section class="testimonial-section">
 
+    <div class="section-title">
 
+        <p class="eyebrow">
+            Pastor Testimonial
+        </p>
 
-    .hero-buttons {
+        <h2>
+            Real Impact From Real Churches
+        </h2>
 
-        justify-content:center;
+        <p>
+            Here's what pastors say who have experienced Kids Worship Launch in their churches.
+        </p>
 
-    }
+    </div>
 
+    <div class="testimonial-card">
 
+        <div class="pastor-image">
 
-    .photo-placeholder {
+    <div class="pastor-info">
 
-        width:280px;
+        <h3>Bryant Belknap</h3>
 
-        height:350px;
+        <p class="role">
+            Youth Pastor<br>
+            Christ Community Church<br>
+            Omaha, NE
+        </p>
 
-    }
+        <p class="contact">
+            BryantB@cccomaha.org
+        </p>
 
+    </div>
 
-}
-/* =========================
-   CHURCH STORIES - PREMIUM DESIGN
-========================= */
+    <img src="BryantBelknap.jpg" alt="Bryant Belknap">
 
+</div>
 
-.stories-section {
-    position: relative;
-    background: #ffffff;
-    overflow: hidden;
+        <div class="testimonial-content">
 
-}
+            <div class="quote-icon">
+                "
+            </div>
 
+            <p class="quote">
 
-/* colorful background shapes */
+                Working with Gage has been a huge blessing for our kids ministry. After leading worship at our large Summer U event, he reached out because he had a vision for helping us build a healthy worship culture and create a clear pathway for real leaders to lead worship in our classrooms each weekend. He took what was basically a messy hard drive full of worship songs, lyric videos, and dance videos and turned it into an organized, easy-to-use system, even renaming files so everything could be found quickly. He also recruited a couple of dancers and, over the course of just three days, filmed 20 dance videos that we can now send to volunteers ahead of time so they can come prepared to lead with confidence. Gage has a unique ability to create systems that are practical, sustainable, and easy for churches to implement. What I appreciate most, though, is that his drive for excellence never overshadows his heart for worship and his passion to see the next generation know and glorify God. I can’t recommend Gage enough to any church that wants to strengthen its kids worship ministry and build something that will continue making an impact for years to come.
 
-.stories-section::before {
+            </p>
 
-    content: "";
+        </div>
 
-    position: absolute;
-    pointer-events: none;
+    </div>
 
-    width: 350px;
-    height: 350px;
+</section>
 
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
 
-    border-radius: 50%;
+    <section id="about" class="about-section">
 
-    top: -150px;
-    left: -150px;
+    <div class="about-wrapper">
 
-    opacity: .12;
+        <div class="about-image">
 
-}
+            <img src="Gage.jpg" alt="Gage Petrick">
 
+        </div>
 
 
-.stories-section::after {
 
-    content: "";
+        <div class="about-content">
 
-    position: absolute;
-    pointer-events: none;
+            <p class="eyebrow">
+                Meet Gage
+            </p>
 
-    width: 300px;
-    height: 300px;
+            <p>
 
-    background: linear-gradient(
-        135deg,
-        #f97316,
-        #fbbf24
-    );
+                Hello! I'm Gage Petrick.
 
-    clip-path: polygon(
-        50% 0,
-        100% 100%,
-        0 100%
-    );
+                I spent the first 18 years of my life living in Elkhorn, Nebraska
+                as a part of an active Christian family. I have always had a passion 
+                for Jesus, especially through worshiping through sing and dance. In
+                my time in Nebraska I was blessed to be a part of Relevant Community
+                Church where I ran the worship team for two years and grew my heart
+                for helping kids find Jesus. Now I am a Freshman at the University 
+                of Alabama and I can't wait to make a difference in my new community.
 
-    bottom: -100px;
-    right: 50px;
+            </p>
 
-    opacity: .15;
+            <p>
+                Through serving at both Relevant and Christ Community I was really
+                able to see that so many churches strive to have the best worship for
+                their kids but don't know where to start. That's why I created Kids Worship
+                Launch—to work alongside churches and help build worship ministries that
+                last long after I am gone.
 
-}
+            </p>
 
+            <div class="about-stats">
 
-.story-container {
+                <div>
 
-    max-width: 1200px;
+                    <h3>2</h3>
 
-    margin:auto;
+                    <p>Churches Served</p>
 
-    display:grid;
+                </div>
 
-    grid-template-columns:repeat(2,1fr);
+                <div>
 
-    gap:50px;
+                    <h3>22</h3>
 
-    position:relative;
+                    <p>Volunteers Led & Equipped</p>
 
-    z-index:2;
+                </div>
 
-    margin-top: 60px;
+                <div>
 
-}
+                    <h3>15</h3>
 
+                    <p>Songs Choreographed</p>
 
+                </div>
 
-.story-card {
+                <div>
 
-    background:white;
+                    <h3>2+</h3>
 
-    border-radius:40px;
+                    <p>Years of Worship Leadership</p>
 
-    padding:0;
+                </div>
 
-    overflow:hidden;
+            </div>
 
-    text-align:left;
+        </div>
 
-    box-shadow:
+    </div>
 
-    0 20px 60px rgba(0,0,0,.08);
+</section>
+<!--
+<section class="journey-section">
 
-    transition:.4s;
+    <div class="journey-header">
 
-    position:relative;
+        <p class="eyebrow">
+            My Journey
+        </p>
 
-}
+        <h2>
+            How Kids Worship Launch Began
+        </h2>
 
+        <p>
+            Every opportunity taught me something new about leading kids worship
+            and preparing volunteers to create engaging worship experiences.
+        </p>
 
+    </div>
 
-.story-card:hover {
 
-    transform:translateY(-12px);
 
-    box-shadow:
+    <div class="timeline">
 
-    0 30px 70px rgba(0,0,0,.15);
+        <div class="timeline-item">
 
-}
+            <div class="timeline-dot blue"></div>
 
+            <div class="timeline-card">
 
+                <h3>Relevant Community Church</h3>
 
-/* image area */
+                <span>2024–2026</span>
 
-.story-image {
+                <p>
+                    I spent two years co-leading an already thriving kids worship
+                    ministry where I developed leadership skills, choreographed
+                    worship dances, coordinated volunteers, and gained experience
+                    leading on Sunday mornings.
+                </p>
 
-    
-    height:260px;
+            </div>
 
-    background:
+        </div>
 
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
 
-    display:flex;
 
-    align-items:center;
+        <div class="timeline-item">
 
-    justify-content:center;
+            <div class="timeline-dot orange"></div>
 
-    color:white;
+            <div class="timeline-card">
 
-    font-size:1.5rem;
+                <h3>Christ Community Church</h3>
 
-    font-weight:800;
+                <span>4 Week Launch</span>
 
-    min-height: 340px;
+                <p>
+                    I helped launch a live kids worship ministry from the ground
+                    up, trained leaders, created resources, and equipped a team
+                    that continues serving today.
+                </p>
 
-    position: relative;
-}
+            </div>
 
-.image-bg{
+        </div>
 
-    position:absolute;
 
-    width:300px;
 
-    height:300px;
+        <div class="timeline-item">
 
-    border-radius:35px;
+            <div class="timeline-dot green"></div>
 
-    z-index:1;
+            <div class="timeline-card">
 
-}
+                <h3>Kids Worship Launch</h3>
 
-.image-bg.blue{
+                <span>Today</span>
 
-    background:linear-gradient(
-        315deg,
-        #2563eb 0%,
-        #3b82f6 50%,
-        #60a5fa 100%
-    );
+                <p>
+                    My mission is now to help churches across the country build
+                    volunteer-led kids worship ministries that continue growing
+                    long after my visit.
+                </p>
 
-    top:20px;
+            </div>
 
-    left:140px;
+        </div>
 
-    transform:rotate(-8deg);
 
-}
 
-.image-bg.orange{
+        <div class="timeline-item future">
 
-    background:linear-gradient(
-        135deg,
-        var(#ff9900),
-        var(#f8f402)
-    );
+            <div class="timeline-dot purple pulse"></div>
 
-    bottom:20px;
+            <div class="timeline-card">
 
-    right:140px;
+                <h3>Your Church?</h3>
 
-    transform:rotate(8deg);
+                <span>Next Chapter</span>
 
-}
+                <p>
+                    I'd love to partner with your church to build an engaging,
+                    volunteer-led kids worship ministry that fits your vision,
+                    your people, and your community.
+                </p>
 
-.story-image img{
+            </div>
 
-    position:relative;
+        </div>
 
-    z-index:2;
+    </div>
 
-    width:270px;
+</section>
+-->
+<section id="contact" section class="contact-section">
 
-    border-radius:25px;
+    <div class="contact-wrapper">
 
-    box-shadow:0 25px 55px rgba(0,0,0,.18);
+        <div class="contact-text">
 
-}
+            <h4 class="eyebrow">
+                Get Started
+            </h4>
 
+            <h2>
+                Bring Kids Worship Launch To Your Church
+            </h2>
 
-.orange-card .story-image {
+            <p>
+                I would love to come to your church and work with you to
+                form a worship team that truly brings kids closer to Jesus!
+                Whether you need a team started from scratch or you need help
+                bringing an existing team to another level, don't hesistate to reach out!
+            </p>
 
-    background:
+            <p>
+                Pricing starts at $500 paid upon satisfaction of the finished product.
+                This $500 is the cost of having a fully-functioning, long-lasting, 
+                volunteer-led worship team.
+                If for any reason you are unsatisfied, I would love to keep working
+                with you on any issues, even if it extends my four week plan!
+            </p>
 
-    linear-gradient(
-        135deg,
-        #f97316,
-        #fbbf24
-    );
+        </div>
 
-}
 
+        <div class="contact-card">
 
+    <h3>
+        Get In Touch
+    </h3>
 
-/* content */
+    <p>
+        Please send me an email if you are interested, and we can discuss
+        anything at an in-person meeting or phone call after that!
+    </p>
 
-.story-content {
 
-    padding:40px;
+    <div class="contact-info">
 
-}
+        <div class="contact-item">
+            📧
+            <span>
+                kidsworshiplaunch@gmail.com
+            </span>
+        </div>
 
 
+        <div class="contact-item">
+            📱
+            <span>
+                402-672-6747
+            </span>
+        </div>
 
-.story-label {
+    </div>
 
-    color:#7c3aed;
 
-    font-size:.8rem;
+    <a href="mailto:kidsworshiplaunch@gmail.com" class="contact-button">
+        Send Me An Email
+    </a>
 
-    font-weight:900;
 
-    letter-spacing:2px;
+</div>
 
-    text-transform:uppercase;
 
-}
+    </div>
 
+</section>
+    <section class="closing-section">
 
+    <div class="closing-content">
 
-.orange-card .story-label {
+        <h2>
+            Ready To Build A Kids Worship Team?
+        </h2>
 
-    color:#f97316;
+        <p>
+        If your ministry has any worship needs, please reach out! I would
+        love to discuss a personalized plan for your church based on your needs.
+        I can absolutely be flexible in whatever is most needed!
+        </p>
 
-}
+        <a href="mailto:kidsworshiplaunch@gmail.com" class="closing-button">
+            Contact Gage
+        </a>
 
+    </div>
 
+</section>
 
-.story-card h3 {
 
-    font-size:2rem;
 
-    margin:15px 0 5px;
+    <footer>
 
-    color:#111827;
+        <p>
+            © 2026 Kids Worship Launch | Gage Petrick
+        </p>
 
-}
+    </footer>
 
 
 
-.story-location {
+    <script src="script.js"></script>
 
-    color:#6b7280 !important;
-
-    font-weight:700;
-
-}
-
-
-
-.story-card p {
-
-    color:#4b5563;
-
-    line-height:1.7;
-
-}
-
-
-
-.impact-grid {
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:15px;
-
-    margin:30px 0;
-
-}
-
-
-
-.impact-grid div {
-
-    background:#f8fafc;
-
-    border-radius:20px;
-
-    padding:18px 10px;
-
-    text-align:center;
-
-}
-
-
-
-.impact-grid strong {
-
-    display:block;
-
-    font-size:2rem;
-
-    color:#2563eb;
-
-}
-
-
-
-.orange-card .impact-grid strong {
-
-    color:#f97316;
-
-}
-
-
-
-.impact-grid span {
-
-    font-size:.8rem;
-
-    color:#6b7280;
-
-}
-
-
-
-.story-button {
-
-    display:inline-block;
-
-    background:#111827;
-
-    color:white;
-
-    padding:15px 28px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-weight:800;
-
-    transition:.3s;
-
-}
-
-
-
-.story-button:hover {
-
-    background:#2563eb;
-
-    transform:translateY(-5px);
-
-}
-
-
-
-/* featured story */
-
-.featured-story {
-
-    border-top: 8px solid #10b981;
-
-}
-
-
-
-.featured-story::before {
-
-    content:"FEATURED STORY";
-
-    position:absolute;
-
-    top:20px;
-
-    right:20px;
-
-    background:#10b981;
-
-    color:white;
-
-    padding:8px 15px;
-
-    border-radius:50px;
-
-    font-size:.7rem;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-
-    z-index:5;
-
-}
-
-
-
-@media(max-width:900px){
-
-    .story-container{
-
-        grid-template-columns:1fr;
-
-    }
-
-
-    .featured-story{
-
-        transform:none;
-
-    }
-
-
-    .impact-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-.section-title {
-    position: relative;
-    z-index: 5;
-}
-/* =========================
-   HERO GEOMETRIC SHAPES
-========================= */
-
-
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
-
-
-.hero-shape {
-
-    position:absolute;
-
-    opacity:.70;
-
-    z-index:0;
-
-}
-.hero-text,
-.hero-image {
-    position:relative;
-    z-index:2;
-}
-/* =========================
-   ABOUT GAGE
-========================= */
-
-.about-section{
-
-    background:white;
-
-    padding:120px 8%;
-
-}
-
-.about-wrapper{
-
-    max-width:900px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:420px 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-.about-image{
-
-    position:relative;
-
-}
-
-.about-image img{
-
-    width:100%;
-
-    border-radius:35px;
-
-    box-shadow:
-    0 25px 60px rgba(0,0,0,.15);
-
-}
-
-.about-content h2{
-
-    font-size:3rem;
-
-    margin:15px 0 30px;
-
-}
-
-.about-content p{
-
-    line-height:1.8;
-
-    color:#555;
-
-    margin-bottom:25px;
-
-}
-
-.about-stats{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
-
-    margin-top:40px;
-
-}
-
-.about-stats div{
-
-    background:#f8fafc;
-
-    padding: 15px;
-
-    border-radius:25px;
-
-    transition:.3s;
-
-    border-left:8px solid #2563eb;
-
-}
-
-.about-stats div:nth-child(2){
-
-    border-color:#10b981;
-
-}
-
-.about-stats div:nth-child(3){
-
-    border-color:#f97316;
-
-}
-
-.about-stats div:nth-child(4){
-
-    border-color:#7c3aed;
-
-}
-
-.about-stats div:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.about-stats h3{
-
-    font-size:1.5rem;
-
-    margin-bottom:1px;
-
-    color:#111827;
-
-}
-
-.about-stats p{
-
-    margin:0;
-
-    color:#667;
-
-}
-
-@media (max-width:900px){
-
-    .about-wrapper{
-        grid-template-columns:1fr;
-        gap:40px;
-    }
-
-    .about-image{
-        max-width:320px;
-        margin:0 auto;
-    }
-
-    .about-content{
-        text-align:center;
-    }
-
-    .about-content h2{
-        font-size:2.2rem;
-    }
-
-    .about-stats{
-        grid-template-columns:1fr;
-    }
-
-}
-/* =========================
-   TIMELINE
-========================= */
-
-.journey-section{
-
-    padding:140px 8%;
-
-    background:linear-gradient(
-        180deg,
-        #ffffff,
-        #f8fafc
-    );
-
-}
-
-.journey-header{
-
-    text-align:center;
-
-    max-width:800px;
-
-    margin:auto;
-
-    margin-bottom:80px;
-
-}
-
-.journey-header h2{
-
-    font-size:3rem;
-
-    margin:20px 0;
-
-}
-
-.timeline{
-
-    max-width:900px;
-
-    margin:auto;
-
-    position:relative;
-
-}
-
-.timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:34px;
-
-    top:0;
-
-    bottom:0;
-
-    width:6px;
-
-    background:linear-gradient(
-
-        #2563eb,
-
-        #f97316,
-
-        #10b981,
-
-        #7c3aed
-
-    );
-
-    border-radius:50px;
-
-}
-
-.timeline-item{
-
-    display:flex;
-
-    gap:40px;
-
-    margin-bottom:70px;
-
-    position:relative;
-
-}
-
-.timeline-dot{
-
-    width:28px;
-
-    height:28px;
-
-    border-radius:50%;
-
-    flex-shrink:0;
-
-    margin-top:20px;
-
-    border:6px solid white;
-
-    box-shadow:0 0 0 6px rgba(0,0,0,.05);
-
-    z-index:2;
-
-}
-
-.blue{
-
-    background:#2563eb;
-
-}
-
-.orange{
-
-    background:#f97316;
-
-}
-
-.green{
-
-    background:#10b981;
-
-}
-
-.purple{
-
-    background:#7c3aed;
-
-}
-
-.timeline-card{
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:25px;
-
-    box-shadow:
-
-        0 20px 60px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.timeline-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.timeline-card h3{
-
-    margin-bottom:5px;
-
-}
-
-.timeline-card span{
-
-    color:#2563eb;
-
-    font-weight:bold;
-
-}
-
-.timeline-card p{
-
-    margin-top:18px;
-
-    color:#555;
-
-    line-height:1.8;
-
-}
-
-.pulse{
-
-    animation:pulseGlow 2s infinite;
-
-}
-
-@keyframes pulseGlow{
-
-    0%{
-
-        box-shadow:0 0 0 0 rgba(124,58,237,.5);
-
-    }
-
-    70%{
-
-        box-shadow:0 0 0 18px rgba(124,58,237,0);
-
-    }
-
-    100%{
-
-        box-shadow:0 0 0 0 rgba(124,58,237,0);
-
-    }
-
-}
-
-@media(max-width:800px){
-
-.timeline::before{
-
-    left:18px;
-
-}
-
-.timeline-item{
-
-    gap:25px;
-
-}
-
-}
-/*=========================
-      PROCESS
-=========================*/
-
-.process-section{
-
-    padding:140px 8%;
-
-    background:linear-gradient(180deg,#f8fbff,#ffffff);
-
-}
-
-.process-flow{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:25px;
-
-    margin-top:80px;
-
-    flex-wrap:wrap;
-
-}
-
-.process-step{
-
-    width:260px;
-
-    background:white;
-
-    padding:35px;
-
-    border-radius:28px;
-
-    text-align:center;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-}
-
-.process-step:hover{
-
-    transform:translateY(-10px);
-
-}
-
-.step-icon{
-
-    width:85px;
-
-    height:85px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    border-radius:50%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:2.7rem;
-
-    background:linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
-
-    color:white;
-
-}
-
-.process-step:nth-of-type(3) .step-icon{
-
-    background:linear-gradient(
-        135deg,
-        #10b981,
-        #22c55e
-    );
-
-}
-
-.process-step:nth-of-type(5) .step-icon{
-
-    background:linear-gradient(
-        135deg,
-        #f97316,
-        #fb923c
-    );
-
-}
-
-.process-step:nth-of-type(7) .step-icon{
-
-    background:linear-gradient(
-        135deg,
-        #ec4899,
-        #a855f7
-    );
-
-}
-
-.process-step h3{
-
-    margin-bottom:18px;
-
-    font-size:1.4rem;
-
-}
-
-.process-step p{
-
-    color:#555;
-
-    line-height:1.8;
-
-}
-
-.process-arrow{
-
-    font-size:2.5rem;
-
-    color:#2563eb;
-
-    font-weight:bold;
-
-}
-
-/* Mobile */
-
-@media(max-width:1100fpx){
-
-    .process-flow{
-
-        flex-direction:column;
-
-    }
-
-    .process-arrow{
-
-        transform:rotate(90deg);
-
-    }
-
-}
-/*=========================
-      RESOURCES
-=========================*/
-
-.resources-section{
-
-    padding:140px 8%;
-
-    background:#f8fafc;
-
-}
-
-.resources-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:35px;
-
-    margin-top:70px;
-
-}
-
-.resource-card{
-
-    background:white;
-
-    border-radius:30px;
-
-    padding:40px;
-
-    text-align:center;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-}
-
-.resource-card:hover{
-
-    transform:translateY(-10px);
-
-}
-
-.resource-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    border-radius:25px;
-
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:white;
-
-    font-size:2.7rem;
-
-}
-
-.resource-card:nth-child(2) .resource-icon{
-
-    background:linear-gradient(135deg,#10b981,#22c55e);
-
-}
-
-.resource-card:nth-child(3) .resource-icon{
-
-    background:linear-gradient(135deg,#f97316,#fb923c);
-
-}
-
-.resource-card:nth-child(4) .resource-icon{
-
-    background:linear-gradient(135deg,#ec4899,#a855f7);
-
-}
-
-.resource-card h3{
-
-    margin-bottom:15px;
-
-}
-
-.resource-card p{
-
-    color:#555;
-
-    line-height:1.8;
-
-}
-
-@media(max-width:800px){
-
-.resources-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-}
-/*=========================
-      TESTIMONIAL
-=========================*/
-
-
-.testimonial-section{
-
-    padding:140px 8%;
-
-    background:#ffffff;
-
-}
-
-
-.testimonial-card{
-
-    max-width:1100px;
-
-    margin:80px auto 0;
-
-    display:grid;
-
-    grid-template-columns:350px 1fr;
-
-    gap:60px;
-
-    align-items:center;
-
-    background:#f8fafc;
-
-    padding:60px;
-
-    border-radius:40px;
-
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.1);
-
-}
-
-
-.pastor-image img{
-
-    width:100%;
-
-    border-radius:35px;
-
-}
-
-
-.quote-icon{
-
-    font-size:5rem;
-
-    line-height:.5;
-
-    color:#2563eb;
-
-    font-weight:bold;
-
-}
-
-
-.quote{
-
-    font-size:1.1rem;
-
-    line-height:1.8;
-
-    color:#444;
-
-    font-style:italic;
-
-}
-
-
-.testimonial-content h3{
-
-    margin-top:35px;
-
-    font-size:1.7rem;
-
-}
-
-.pastor-info{
-
-    text-align:center;
-
-    margin-bottom:20px;
-
-}
-
-.pastor-info h3{
-
-    margin-bottom:8px;
-
-}
-
-.pastor-info .role{
-
-    margin-bottom:10px;
-
-}
-
-
-.role{
-
-    color:#2563eb;
-
-    font-weight:bold;
-
-}
-
-
-.contact{
-
-    margin-top:20px;
-
-}
-
-
-@media(max-width:850px){
-
-    .testimonial-card{
-
-        grid-template-columns:1fr;
-
-        padding:35px;
-
-        text-align:center;
-
-    }
-
-
-    .pastor-image{
-
-        max-width:300px;
-
-        margin:auto;
-
-    }
-
-}
-/*=========================
-      CONTACT SECTION
-=========================*/
-
-.contact-section{
-
-    padding:140px 8%;
-
-    background:linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed
-    );
-
-}
-
-
-.contact-wrapper{
-
-    max-width:800px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr;
-
-    gap:70px;
-
-    align-items:center;
-
-}
-
-
-/* LEFT SIDE TEXT */
-
-.contact-text{
-
-    color:white;
-
-}
-
-
-.contact-text h2{
-
-    font-size:3rem;
-
-    margin:20px 0 30px;
-
-}
-
-
-.contact-text p{
-
-    line-height:1.8;
-
-    font-size:1.1rem;
-
-    margin-bottom:20px;
-
-    color: #000;
-
-}
-
-
-.contact-card{
-
-    background:white;
-
-    padding:45px;
-
-    border-radius:35px;
-
-    box-shadow:0 25px 70px rgba(0,0,0,.2);
-
-}
-
-
-.contact-card h3{
-
-    font-size:2rem;
-
-    margin-bottom:20px;
-
-}
-
-
-.contact-card p{
-
-    color:#000;
-
-    line-height:1.8;
-
-    margin-bottom:30px;
-
-}
-
-
-.contact-info{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
-    margin-bottom:35px;
-
-}
-
-
-.contact-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:15px;
-
-    font-size:1.1rem;
-
-}
-
-
-.contact-button{
-
-    display:inline-block;
-
-    padding:16px 30px;
-
-    border-radius:50px;
-
-    background:#f97316;
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-
-.contact-button:hover{
-
-    transform:translateY(-5px);
-
-}
-
-
-/* MOBILE */
-
-@media(max-width:800px){
-
-    .contact-wrapper{
-
-        grid-template-columns:1fr;
-
-        gap:50px;
-
-    }
-
-
-    .contact-text h2{
-
-        font-size:2.3rem;
-
-    }
-
-
-}
-/*=========================
-      CLOSING SECTION
-=========================*/
-
-.closing-section{
-
-    padding:120px 8%;
-
-    background:linear-gradient(
-        135deg,
-        #f97316,
-        #ec4899
-    );
-
-    text-align:center;
-
-    color:white;
-
-}
-
-.closing-content p{
-
-    color:black
-
-}
-.closing-content{
-
-    max-width:800px;
-
-    margin:auto;
-
-}
-
-
-.closing-content h2{
-
-    font-size:3rem;
-
-    margin-bottom:25px;
-
-}
-
-
-.closing-content p{
-
-    font-size:1.15rem;
-
-    line-height:1.8;
-
-    margin-bottom:20px;
-
-}
-
-
-.closing-button{
-
-    display:inline-block;
-
-    margin-top:30px;
-
-    padding:18px 40px;
-
-    border-radius:50px;
-
-    background:white;
-
-    color:#f97316;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
-    transition:.3s;
-
-}
-
-
-.closing-button:hover{
-
-    transform:translateY(-5px);
-
-}
-
-
-@media(max-width:700px){
-
-    .closing-content h2{
-
-        font-size:2.2rem;
-
-    }
-
-}
-
-html,
-body{
-    width:100%;
-    overflow-x:hidden;
-    overflow-x:clip;
-}
+</body>
+</html>
