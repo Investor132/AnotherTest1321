@@ -1618,7 +1618,7 @@ footer {
 
     .process-arrow{
 
-        display: hide !important;
+        display: none !important;
 
     }
 
@@ -2150,4 +2150,10 @@ body{
     width:100%;
     overflow-x:hidden;
     overflow-x:clip;
+}
+@media screen and (max-width: 800px) {
+    .process-arrow {
+        display: none !important;
+        visibility: hidden !important;
+    }
 }
