@@ -2233,6 +2233,13 @@ body{
         display: none !important;
         visibility: hidden !important;
     }
+   .photo-placeholder {
+
+        width:280px;
+
+        height:210px;
+
+    }
 }
 /* ---------- BACK TO TOP ---------- */
 
