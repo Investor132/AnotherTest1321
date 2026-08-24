@@ -1614,6 +1614,7 @@ footer {
     .process-arrow{
 
         transform:rotate(90deg);
+        display:none;
 
     }
 
