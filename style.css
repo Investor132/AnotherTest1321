@@ -260,8 +260,8 @@ header {
     }
 
     .logo img {
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        height: 65px;
     }
 
     /* Hide desktop navigation */
@@ -2236,6 +2236,8 @@ body{
 }
 /* ---------- BACK TO TOP ---------- */
 
+/* ---------- BACK TO TOP ---------- */
+
 .back-to-top {
     position: fixed;
     bottom: 25px;
@@ -2247,16 +2249,16 @@ body{
     background: var(--blue);
     color: white;
 
-    border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
 
+    border-radius: 50%;
+
     text-decoration: none;
 
     font-size: 26px;
-    font-weight: bold;
+    font-weight: 900;
 
     box-shadow: 0 8px 20px rgba(0,0,0,.15);
 
@@ -2264,12 +2266,15 @@ body{
 
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s ease, visibility .3s ease;
     pointer-events: none;
+
+    transition:
+        opacity 1.6s ease,
+        visibility 1.6s ease;
 }
 
 .back-to-top.show {
-    opacity: 1;
+    opacity: .85;
     visibility: visible;
     pointer-events: auto;
 }
