@@ -1608,7 +1608,7 @@ footer {
 
 /* Mobile */
 
-@media(max-width:1100fpx){
+@media(max-width:800fpx){
 
     .process-flow{
 
@@ -1618,7 +1618,7 @@ footer {
 
     .process-arrow{
 
-        display: block !important;
+        display: hide !important;
 
     }
 
