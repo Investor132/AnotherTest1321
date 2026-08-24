@@ -185,12 +185,10 @@ body {
 
 /* ---------- NAVIGATION ---------- */
 
-
 header {
     width: 100%;
     padding: 30px 8%;
 }
-
 
 .logo {
     position: absolute;
@@ -205,70 +203,56 @@ header {
     object-fit: contain;
 }
 
-
 .navbar {
-
     display: flex;
     justify-content: right;
     align-items: center;
-
 }
-
-
 
 .logo span {
-
     display: block;
-
     font-size: .85rem;
-
     color: var(--blue);
-
     font-weight: 600;
-
 }
-
-
 
 .nav-links {
-
     display: flex;
-
     list-style: none;
-
     gap: 30px;
-
     align-items: center;
-
 }
-
-
 
 .nav-links a {
-
     text-decoration: none;
-
     color: var(--dark);
-
     font-weight: 600;
-
 }
-
-
 
 .nav-button {
-
     background: var(--blue);
-
     color: white !important;
-
     padding: 12px 25px;
-
     border-radius: 50px;
-
 }
 
-@media(max-width:800px) {
+
+/* ---------- MOBILE MENU ---------- */
+
+.menu-toggle {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+
+@media(max-width:900px) {
+
+    header {
+        padding: 20px 5%;
+    }
 
     .logo {
         top: 15px;
@@ -278,6 +262,99 @@ header {
     .logo img {
         width: 50px;
         height: 50px;
+    }
+
+    /* Hide desktop navigation */
+    .nav-links {
+        display: none;
+    }
+
+    /* Hamburger button */
+    .menu-toggle {
+        display: flex;
+
+        position: absolute;
+        top: 15px;
+        right: 5%;
+
+        width: 50px;
+        height: 50px;
+
+        border: none;
+        border-radius: 14px;
+
+        background: white;
+
+        align-items: center;
+        justify-content: center;
+
+        flex-direction: column;
+        gap: 5px;
+
+        cursor: pointer;
+
+        box-shadow: 0 4px 15px rgba(0,0,0,.10);
+
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        width: 24px;
+        height: 3px;
+
+        background: var(--dark);
+
+        border-radius: 3px;
+    }
+
+    /* Dropdown */
+    .mobile-menu {
+        position: absolute;
+
+        top: 75px;
+        right: 5%;
+
+        width: 240px;
+
+        background: white;
+
+        border-radius: 20px;
+
+        padding: 15px;
+
+        box-shadow: 0 15px 40px rgba(0,0,0,.15);
+
+        z-index: 1000;
+
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .mobile-menu.active {
+        display: flex;
+    }
+
+    .mobile-menu a {
+        display: block;
+
+        padding: 14px 15px;
+
+        text-decoration: none;
+
+        color: var(--dark);
+
+        font-weight: 600;
+
+        border-radius: 12px;
+    }
+
+    .mobile-menu a:hover {
+        background: var(--light);
+    }
+
+    .mobile-menu .nav-button {
+        text-align: center;
+        margin-top: 5px;
     }
 
 }
