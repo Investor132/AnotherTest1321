@@ -32,3 +32,8 @@ if (backToTop) {
     });
 
 }
+console.log("SCRIPT IS RUNNING");
+
+window.addEventListener("scroll", () => {
+    console.log("SCROLLING", window.scrollY);
+});
