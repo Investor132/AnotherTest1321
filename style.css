@@ -187,20 +187,23 @@ body {
 
 
 header {
-
     width: 100%;
     padding: 30px 8%;
-
+    position: relative;
 }
 
 
-.logo img{
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 8%;
+    z-index: 10;
+}
 
-    width:160px;
-    height:160px;
-
-    object-fit:contain;
-
+.logo img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
 }
 
 
@@ -212,16 +215,6 @@ header {
 
 }
 
-
-
-.logo {
-
-    font-size: 1.5rem;
-    font-weight: 800;
-
-    color: var(--dark);
-
-}
 
 
 .logo span {
@@ -276,6 +269,19 @@ header {
 
 }
 
+@media(max-width:800px) {
+
+    .logo {
+        top: 15px;
+        left: 5%;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+}
 
 
 /* ---------- HERO ---------- */
