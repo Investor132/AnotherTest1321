@@ -2233,19 +2233,11 @@ body{
         display: none !important;
         visibility: hidden !important;
     }
-   .photo-placeholder {
-
-        width:280px;
-
-        height:210px;
-
-    }
 }
 /* ---------- BACK TO TOP ---------- */
 
 .back-to-top {
     position: fixed;
-
     bottom: 25px;
     right: 25px;
 
@@ -2263,19 +2255,29 @@ body{
 
     text-decoration: none;
 
-    font-size: 36px;
+    font-size: 26px;
     font-weight: bold;
 
     box-shadow: 0 8px 20px rgba(0,0,0,.15);
 
     z-index: 999;
 
-    transition: .3s;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    pointer-events: none;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .back-to-top:hover {
     transform: translateY(-5px);
 }
+
 .back-to-top span {
     transform: translateY(-4px);
 }
