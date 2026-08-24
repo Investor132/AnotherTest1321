@@ -1,7 +1,6 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 const backToTop = document.querySelector(".back-to-top");
-console.log("BACK TO TOP:", backToTop);
 
 // Hamburger menu
 if (menuToggle && mobileMenu) {
@@ -22,19 +21,16 @@ if (menuToggle && mobileMenu) {
 // Back to top button
 if (backToTop) {
 
-    window.addEventListener("scroll", () => {
-        console.log("SCROLLING", window.scrollY);
+window.addEventListener("scroll", () => {
+    const hero = document.querySelector(".hero");
+    const heroBottom = hero.offsetTop + hero.offsetHeight;
 
-        if (window.scrollY > 100) {
-            backToTop.classList.add("show");
-        } else {
-            backToTop.classList.remove("show");
-        }
-    });
+    if (window.scrollY > heroBottom) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+});
 
 }
-console.log("SCRIPT IS RUNNING");
-
-window.addEventListener("scroll", () => {
-    console.log("SCROLLING", window.scrollY);
-});
