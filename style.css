@@ -272,7 +272,7 @@ header {
 @media(max-width:800px) {
 
     .logo {
-        top: 250px;
+        top: 15px;
         left: 5%;
     }
 
@@ -1619,8 +1619,7 @@ footer {
 
     .process-arrow{
 
-        transform:rotate(90deg);
-        display:none;
+        display: none !important;
 
     }
 
