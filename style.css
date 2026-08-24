@@ -189,20 +189,19 @@ body {
 header {
     width: 100%;
     padding: 30px 8%;
-    position: relative;
 }
 
 
 .logo {
     position: absolute;
     top: 20px;
-    left: 8%;
+    left: 10%;
     z-index: 10;
 }
 
 .logo img {
-    width: 65px;
-    height: 65px;
+    width: 120px;
+    height: 120px;
     object-fit: contain;
 }
 
@@ -210,7 +209,7 @@ header {
 .navbar {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
 
 }
@@ -277,7 +276,6 @@ header {
     }
 
     .logo img {
-        top: 100px;
         width: 50px;
         height: 50px;
     }
@@ -1621,6 +1619,12 @@ footer {
     .process-arrow{
 
         display: none !important;
+        visibility: hidden;
+        height: 0;
+        width: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
 
     }
 
