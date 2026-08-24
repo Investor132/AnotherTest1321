@@ -1,6 +1,7 @@
 const menuToggle = document.querySelector(".menu-toggle");
 const mobileMenu = document.querySelector(".mobile-menu");
 const backToTop = document.querySelector(".back-to-top");
+console.log("BACK TO TOP:", backToTop);
 
 // Hamburger menu
 if (menuToggle && mobileMenu) {
